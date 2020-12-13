@@ -1,4 +1,4 @@
-package example;
+package javaEssence;
 
 public class Source02_DrawShape {
 	public static void main(String[] args) {

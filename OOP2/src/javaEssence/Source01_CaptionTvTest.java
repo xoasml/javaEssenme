@@ -1,4 +1,4 @@
-package example;
+package javaEssence;
 
 class Tv{
 	boolean power;		// 전원상태(on/off)

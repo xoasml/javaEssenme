@@ -1,4 +1,4 @@
-package example;
+package javaEssence;
 
 public class Source03_DeckTest {
 	public static void main(String[] args) {
