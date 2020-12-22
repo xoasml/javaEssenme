@@ -1,8 +1,8 @@
 package example;
 
-public class Source20_FinallyTest3 {
+public class Source19_FinallyTest3 {
 	public static void main(String[] args) {
-		Source20_FinallyTest3.method1();
+		Source19_FinallyTest3.method1();
 		System.out.println("method1()의 수행을 마치고 main메서드로 돌아왔습니다.");
 	}
 	

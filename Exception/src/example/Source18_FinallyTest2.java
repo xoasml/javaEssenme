@@ -1,6 +1,6 @@
 package example;
 
-public class Source19_FinallyTest2 {
+public class Source18_FinallyTest2 {
 	public static void main(String[] args) {
 		try {
 			startInstall();

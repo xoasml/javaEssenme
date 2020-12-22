@@ -1,6 +1,6 @@
 package example;
 
-public class Source18_FinallyTest1 {
+public class Source17_FinallyTest1 {
 	public static void main(String[] args) {
 		try {
 			startInstall();		// 프로그램 설치에 필요한 준비를 한다.
