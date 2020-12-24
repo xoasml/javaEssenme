@@ -1,8 +1,12 @@
 package example;
 
 class Card {
-	String kind;
-	int number;
+	public String kind;
+	public int number;
+	
+	int width;
+	int hight;
+	
 	
 	public Card() {
 		this("SPADE", 1);

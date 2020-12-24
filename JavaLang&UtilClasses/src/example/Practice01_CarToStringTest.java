@@ -17,7 +17,7 @@ class Car {
     }
 }
 
-class CarToStringTest {
+class Practice01_CarToStringTest {
 	public static void main(String[] args) {
     	Car c1 = new Car("SUV", "RED", 4);
         Car c2 = new Car("SportCar", "BLACK", 2);

@@ -1,28 +1,32 @@
 package example;
 
-import java.util.Arrays;
-
-public class Source07_CloneEx1 {
-	public static void main(String[] args) {
-		CloneTest ct1 = new CloneTest(10);
-		CloneTest ct2 = ct1.clone();
-		System.out.println(ct1);
-		System.out.println(ct2);
-	}
-}
-
-class CloneTest implements Cloneable{
-	private int x;
-
-	public CloneTest(int x) {
-		this.x = x;
-	}
+class Point1 implements Cloneable{
+	int x, y;
 	
-	public void setX(int x) {
+	Point1(int x, int y){
 		this.x = x;
+		this.y = y;
+		
 	}
 	
 	public String toString() {
-		return "x : " + x;
+		return "x : " + x + ", y : " + y;
+	}
+	
+	public Point1 clone() {
+		Object obj = null;
+		try {
+			obj = super.clone();
+		} catch (CloneNotSupportedException e) {}
+		return (Point1)obj;
+	}
+}
+
+public class Source07_CloneEx1 {
+	public static void main(String[] args) {
+		Point1 original = new Point1(3, 5);
+		Point1 copy = original.clone();
+		System.out.println(original);
+		System.out.println(copy);
 	}
 }
