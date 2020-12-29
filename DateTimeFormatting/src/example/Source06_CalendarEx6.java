@@ -47,9 +47,5 @@ public class Source06_CalendarEx6 {
 				System.out.println();
 			}
 		}
-		
-		
-		
-		
 	}
 }
