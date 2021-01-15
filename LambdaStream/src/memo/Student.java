@@ -3,12 +3,12 @@ package memo;
 public class Student implements Comparable<Student>{
 	String name;
 	int ban;
-	int totalScore;
+	int score;
 	
-	Student(String name, int ban, int totalScore){
+	Student(String name, int ban, int score){
 		this.name = name;
 		this.ban = ban;
-		this.totalScore = totalScore;
+		this.score = score;
 	}
 	
 	public static Student[] getStuArr() {
@@ -24,8 +24,9 @@ public class Student implements Comparable<Student>{
 		return stuArr;
 	}
 	
+	@Override
 	public String toString() {
-		return String.format("[%s, %d, %d]", name, ban, totalScore);
+		return String.format("[%s, %d, %d]", name, ban, score).toString();
 	}
 	
 	String getName() {
@@ -37,11 +38,11 @@ public class Student implements Comparable<Student>{
 	}
 	
 	int getTotalScore() {
-		return totalScore;
+		return score;
 	}
 	
 	@Override
 	public int compareTo(Student o) {
-		return o.totalScore - this.totalScore;
+		return o.score - this.score;
 	}
 }

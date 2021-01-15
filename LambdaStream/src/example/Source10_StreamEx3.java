@@ -7,24 +7,24 @@ import java.util.stream.Stream;
 
 public class Source10_StreamEx3 {
 	public static void main(String[] args) {
-		Student[] stuArr = {
-				new Student("이자바", 3, 300),
-				new Student("김자바", 1, 200),
-				new Student("안자바", 2, 100),
-				new Student("박자바", 2, 150),
-				new Student("소자바", 1, 200),
-				new Student("나자바", 3, 290),
-				new Student("감자바", 3, 180)
+		Student2[] stuArr = {
+				new Student2("이자바", 3, 300),
+				new Student2("김자바", 1, 200),
+				new Student2("안자바", 2, 100),
+				new Student2("박자바", 2, 150),
+				new Student2("소자바", 1, 200),
+				new Student2("나자바", 3, 290),
+				new Student2("감자바", 3, 180)
 		};
 		
-		Stream<Student> stuStream = Stream.of(stuArr);
+		Stream<Student2> stuStream = Stream.of(stuArr);
 		
-		stuStream.sorted(Comparator.comparing(Student::getBan)
+		stuStream.sorted(Comparator.comparing(Student2::getBan)
 			.thenComparing(Comparator.naturalOrder()))
 			.forEach(System.out::println);
 		
 		stuStream = Stream.of(stuArr);
-		IntStream stuScoreStream = stuStream.mapToInt(Student::getTotalScore);
+		IntStream stuScoreStream = stuStream.mapToInt(Student2::getTotalScore);
 		
 		IntSummaryStatistics stat = stuScoreStream.summaryStatistics();
 		System.out.println("count="+stat.getCount());
@@ -35,12 +35,12 @@ public class Source10_StreamEx3 {
 	}
 }
 
-class Student implements Comparable<Student>{
+class Student2 implements Comparable<Student2>{
 	String name;
 	int ban;
 	int totalScore;
 	
-	Student(String name, int ban, int totalScore){
+	Student2(String name, int ban, int totalScore){
 		this.name = name;
 		this.ban = ban;
 		this.totalScore = totalScore;
@@ -63,7 +63,7 @@ class Student implements Comparable<Student>{
 	}
 	
 	@Override
-	public int compareTo(Student o) {
+	public int compareTo(Student2 o) {
 		return o.totalScore - this.totalScore;
 	}
 }

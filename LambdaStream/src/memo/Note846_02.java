@@ -1,6 +1,5 @@
 package memo;
 
-import java.util.Arrays;
 import java.util.Optional;
 import java.util.OptionalInt;
 import java.util.Random;
@@ -32,7 +31,6 @@ public class Note846_02 {
 		long sum2 = intStream.boxed().collect(Collectors.reducing(0, (a,b) -> a+b));
 		System.out.println(sum2);
 		
-		
 		Stream<Student> stuStrm = Stream.of(Student.getStuArr());
 		int grandTotal1 = stuStrm.map(Student::getTotalScore).reduce(0, Integer::sum);
 		System.out.println(grandTotal1);
@@ -40,7 +38,5 @@ public class Note846_02 {
 		stuStrm = Stream.of(Student.getStuArr());
 		int grandTotal2 = stuStrm.collect(Collectors.reducing(0,Student::getTotalScore,Integer::sum));
 		System.out.println(grandTotal2);
-		
-		
 	}
 }
